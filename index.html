@@ -1,0 +1,32 @@
+<html>
+
+<body>
+  <audio id="audioTrack1" controls>
+    <source src="audioTrack1.mp3" type="audio/mpeg">
+  </audio>
+
+  <script>
+    let audioTrack1 = document.getElementById("audioTrack1");
+    let audioTrack1Durration;
+
+    function audioDuration() {
+      audioTrack1Durration = document.getElementById("audioTrack1").duration;
+      console.log(audioTrack1Durration);
+    }
+
+    function setCurrentTime() {
+      audioTrack1.currentTime = Math.floor(Math.random() * (audioTrack1Durration - 0)) + 0;;
+    }
+
+    window.addEventListener("load", (event) => {
+      audioDuration();
+      setCurrentTime();
+    });
+
+
+  </script>
+
+
+</body>
+
+</html>
